@@ -6,9 +6,10 @@
 }
 
 body {
-    background-color: darkslategrey;
-    background-image: conic-gradient();
-    color: #333;
+
+    background-color: #08080c;
+    background-image: radial-gradient(circle at 50% 35%, rgb(205 211 26 / 0.4) 0%,rgba(8,8,12,1)65%);
+    color: #ffffff;
     display: flex;
     justify-content: center;
     padding: 40px 20px;
@@ -16,11 +17,11 @@ body {
 }
 
 .app-container {
-    background: #7f8c8d;
+    background: dimgray;
     width: 100%;
     max-width: 550px;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -30,13 +31,13 @@ header {
 }
 
 header h1 {
-    color: darkslategrey;
+    color:white;
     font-size: 28px;
     margin-bottom: 5px;
 }
 
 header p {
-    color: #ffffff;
+    color: #A1A1AA;
     font-size: 14px;
 }
 
@@ -49,31 +50,37 @@ header p {
 #taskInput {
     flex: 1;
     padding: 12px 15px;
-    border: 2px solid #2c3e50;
+    border: 2px solid #08080C;
+    color: black ;
+    border: 1px solid #272730;
     border-radius: 8px;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s,box-shadow 0.2s;
 }
 
-#taskInput:focus {
-    border-color: #eaeef2;
+#taskInput::placeholder {
+    color: #6B6B76;
+}
+#taskInput:focus{
+    border-color: #C6F432;
+    box-shadow: 0 0 8px rgba(192,244,50,0.25);
 }
 
 #addBtn {
-    background-color: darkslategrey;
-    color: white;
+    background-color: #C6F432;
+    color: #08080C;/*Dark text for crisp contrast on lime green*/
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s,transform 0.1s;
 }
 
 #addBtn:hover {
-    background-color: yellowgreen;
+    background-color:#b4e322;
 }
 
 .task-section {
@@ -82,25 +89,28 @@ header p {
 
 .task-section h2 {
     font-size: 18px;
-    color: darkslategrey;
+    color: white;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #f0f2f5;
+    border-bottom: 2px solid #22222A;
     padding-bottom: 8px;
 }
 
 .badge {
-    background-color: #f39c12;
-    color: white;
+    background-color: #C6F432;
+    color: #08080c;
     font-size: 12px;
+    font-weight: 700;
     padding: 3px 10px;
     border-radius: 12px;
 }
 
 .completed-badge {
-    background-color: #2ecc71;
+    background-color: #272730;
+    color: #C6F432;
+    border: 1px solid #C6F432;
 }
 
 .task-list {
@@ -111,16 +121,16 @@ header p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #95a5a6;
+    background: #17171E;
     padding: 12px 15px;
-    border: 1px solid #eaeef2;
+    border: 1px solid #25252E;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .task-item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: rgba(198, 244, 50, 0.04);
 }
 
 .task-left {
@@ -135,17 +145,17 @@ header p {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    accent-color: #2ecc71;
+    accent-color: #C6F432;
 }
 
 .task-text {
     font-size: 16px;
-    color: #2c3e50;
+    color:#ffffff;
 }
 
 .completed .task-text {
     text-decoration: line-through;
-    color: #eaeef2;
+    color: #6B6B76;
 }
 
 .task-actions {
@@ -165,12 +175,13 @@ header p {
 }
 
 .edit-btn {
-    background-color: #2c4a4c;
+    background-color: #272730;
     color: #fff;
+    border: 1px solid #3A3A46;
 }
 
 .delete-btn {
-    background-color: #f39c12;
+    background-color: #e74c3c;
     color: #fff;
 }
 
@@ -179,7 +190,7 @@ header p {
 }
 
 .empty-msg {
-    color: #2c4a4c;
+    color: #8E8E9A;
     font-size: 14px;
     font-style: italic;
     padding: 8px 0;
